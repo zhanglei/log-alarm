@@ -46,8 +46,8 @@ func SendMail(to []string, title string, body string) error {
 
 	message += fmt.Sprintf("\r\n%s", body)
 
-	fmt.Print(message)
-	return nil
+	//fmt.Print(message)
+	//return nil
 
 	err := smtp.SendMail(host+":"+port, auth, user, to, []byte(message))
 	return err
